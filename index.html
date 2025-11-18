@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="Login and Signup.css">
+</head>
+<body>
+
+<div class="main-container">
+    
+    <!-- LEFT LOGO PANEL -->
+    <div class="logo-panel">
+        <img src="WhiskerWorks.png" alt="Logo">
+    </div>
+
+    <!-- RIGHT LOGIN/SIGNUP SLIDER -->
+    <div class="container">
+        <div class="form-wrapper" id="forms">
+
+            <!-- LOGIN FORM -->
+            <form class="form login-form">
+                <h2>☕ Login ☕</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <span class="toggle-link" onclick="showSignup()">Don't have an account? Sign up</span>
+            </form>
+
+            <!-- SIGNUP FORM -->
+            <form class="form signup-form" id="universalForm">
+                <h2>🥞 Sign Up 🥞</h2>
+                <p class="form-description">Please fill out all the required fields marked with an asterisk (*)</p>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="required">Full Name:</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Email:</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Password:</label>
+                        <input type="password" minlength="8" required>
+                        <p class="file-info">Must be at least 8 characters long</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Birth Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <input type="time">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Satisfaction Level:</label>
+                        <input type="range" min="1" max="10" value="5">
+                        <p class="file-info">Slide to rate your experience (1-10)</p>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Bio:</label>
+                        <textarea rows="4" placeholder="Tell us about yourself..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select>
+                            <option value="">Select Country</option>
+                            <option>USA</option>
+                            <option>Canada</option>
+                            <option>UK</option>
+                            <option>Australia</option>
+                            <option>Germany</option>
+                            <option>Philippines</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Province</label>
+                        <input type="search" placeholder="Province here or City where you belong..">
+                    </div>
+
+                    <fieldset class="full-width">
+                        <legend>Preferences</legend>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="newsletter"> Newsletter</label>
+                            <label><input type="checkbox" name="updates"> Updates</label>
+                            <label><input type="checkbox" name="notifications"> Notifications</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="full-width">
+                        <legend>Contact Method:</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="contact" value="email" checked> Email</label>
+                            <label><input type="radio" name="contact" value="phone"> Phone</label>
+                            <label><input type="radio" name="contact" value="sms"> SMS</label>
+                            <label><input type="radio" name="contact" value="mail"> Postal Mail</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group full-width">
+                        <label>
+                            <input type="checkbox" required>I agree to the <a href="#" target="_blank">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <div class="form-group full-width button-group">
+                        <button type="reset" class="reset-btn">Reset</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+                
+                <span class="toggle-link" onclick="showLogin()">Already have an account? Log in</span>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function showSignup() {
+        document.getElementById("forms").classList.add("show-signup");
+    }
+    function showLogin() {
+        document.getElementById("forms").classList.remove("show-signup");
+    }
+</script>
+
+</body>
+</html>
